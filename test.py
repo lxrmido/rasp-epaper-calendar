@@ -118,7 +118,7 @@ def getTempData():
         dataArray = json.loads(response.text)
     except:
         logging.info("Get temp data failed")
-        return false
+        return False
     else:
         return dataArray
 
@@ -128,7 +128,7 @@ def getForecastData():
         resData = json.loads(response.text).get('HeWeather6')[0]['daily_forecast']
     except:
         logging.info("Get forecast data failed")
-        return false
+        return False
     else:
         return resData
 
